@@ -1,1 +1,0 @@
-System.register(["./p-88cd739c.system.js"],(function(){"use strict";var e,t;return{setters:[function(s){e=s.p;t=s.b}],execute:function(){e().then((function(e){return t([["p-tupq6dx7.system",[[1,"my-component",{first:[1],middle:[1],last:[1],surveyId:[1,"survey-id"],userId:[1,"user-id"],questions:[32]}]]]],e)}))}}}));
