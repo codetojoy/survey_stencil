@@ -16,12 +16,14 @@
 
 ### Usage
 
-* edit `setvars.sh` so that Tomcat URL is correct
+* edit [setvars.sh](./setvars.sh) so that Tomcat URL is correct
+* edit [this file](./my-component/src/components/my-component/my-component.tsx) so that Tomcat URL is correct
 * in Bash: `./build_all.sh`
     * builds `api-server` WAR and deploys to Tomcat
     * calls `./build_my_component_and_web_client.sh` 
         * runs `npm` to build component in `./my-component/dist`
         * builds `web-client` WAR and deploys to Tomcat
+            * this will copy `./my-component/dist` into the WAR
 * to confirm REST api, browse to `$MY_SERVER_HOST/api-server/rest/v1/surveys`
 * to confirm component, browse to `$MY_SERVER_HOST/web-client/index.jsp`
 
