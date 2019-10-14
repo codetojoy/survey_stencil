@@ -13,11 +13,12 @@
 * local Tomcat install
 * Java 
 * Node / NPM
+* some scripts use `wget`, but it isn't a deal-breaker (just noisy errors)
 
 ### Usage
 
 * edit [setvars.sh](./setvars.sh) so that Tomcat URL is correct
-* edit [this file](./my-component/src/components/my-component/my-component.tsx) so that Tomcat URL is correct
+* edit [this file](./my-component/src/components/my-component/my-component.tsx) and [this file](./my-component/src/services/question-controller.ts) so that Tomcat URL is correct
 * in Bash: `./build_all.sh`
     * builds `api-server` WAR and deploys to Tomcat
     * calls `./build_my_component_and_web_client.sh` 
