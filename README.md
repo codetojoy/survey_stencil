@@ -3,4 +3,4 @@
 
 * component-based
     * simple example of a Stencil component
-    * see [./component-based/README.md]
+    * see [README.md](./component-based/README.md)
