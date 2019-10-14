@@ -21,7 +21,12 @@ export class MyComponent {
   private questionController: QuestionController = new QuestionController();
 
   async componentWillLoad() {
-    let response = await fetch("http://localhost:5151/api-server/rest/v1/surveys/302");
+    // ******* CHANGE THIS for your machine
+    const MY_SERVER_HOST = "http://localhost:5151";
+    // *******
+    const REST_API_GET_BY_ID = `${MY_SERVER_HOST}/api-server/rest/v1/surveys/302`;
+
+    let response = await fetch(REST_API_GET_BY_ID);
     let json = await response.json();
     this.surveyId = json.id;
     this.userId = json.userId;
@@ -34,7 +39,7 @@ export class MyComponent {
 
   render() {
     return (<div>
-      <div>TRACER 14-OCT 09:45 Hello, World! I'm {this.getText()}</div>
+      <div>TRACER 14-OCT 10:35am Hello, World! I'm {this.getText()}</div>
       <div>survey id: {this.surveyId}</div>
       <div>user id: {this.userId}</div>
       {
