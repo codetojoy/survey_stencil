@@ -1,0 +1,1 @@
+import{p as m,b as p}from"./p-7453285f.js";m().then(m=>p([["p-ucgzjc40",[[1,"my-component",{first:[1],middle:[1],last:[1]}]]]],m));

@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'war'
+
+task copyComponentJS(type: Copy) {
+    from "${projectDir}/../my-component/dist"
+    into "${projectDir}/src/main/webapp/js"
+
+    doFirst {
+        ant.delete(dir: "${projectDir}/src/main/webapp/js")
+        ant.mkdir(dir: "${projectDir}/src/main/webapp/js")
+    }
+}
+
+war {
+    archiveName 'web-client.war'
+}
+
+war.dependsOn copyComponentJS
