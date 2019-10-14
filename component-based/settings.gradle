@@ -1,0 +1,4 @@
+// TODO: add 'my-component' and do a proper Gradle build 
+
+include 'model', 'api-server', 'cli-client', 'web-client'
+
